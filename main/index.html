@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Que bom ver você por aqui</title>
+    <style>
+        .div-primeira {
+            position: fixed;
+            top: 20%;
+            left: 0;
+            background-color: lightblue;
+            width: 100%;
+            height: 100%;
+            visibility: visible;
+            text-align: center;
+            background-image: url(../../Mario-Backgrounds-Desktop.jpg);
+
+            .primeiroBotao:hover {
+                margin-left: 20%;
+                margin-top: 20%;
+            }
+        }
+        
+        .div-segunda {
+            position: fixed;
+            top: 20%;
+            left: 0;
+            background-color: rgb(215, 224, 229);
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            text-align: center;
+            background-image: url(../../Mario-Backgrounds-Desktop.jpg);
+
+        }
+        .div-terceira {
+            position: fixed;
+            top: 20%;
+            left: 0;
+            background-color: rgb(163, 164, 164);
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            text-align: center;
+            background-image: url(../../Mario-Backgrounds-Desktop.jpg);
+
+        }
+
+        p, h1 {
+            text-align: center;
+        }
+
+        .div-quarto {
+            position: fixed;
+            top: 20%;
+            left: 30%;
+            visibility: hidden;
+            width: 40%;
+            margin: 8px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: beige;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Olá Ricardo, que bom ter você por aqui :D</h1>
+    <p>Dica: Que tal tentar outra resposta: ;)</p>
+    <div id="primeiraPergunta" class="div-primeira">
+        <h3>Você quer continuar e ver o que temos por aqui?</h3>
+        <button id="buttonPrimeiro" onclick="mudarDivPrimeira()">Não</button>
+        <button class="primeiroBotao">Sim</button>
+    </div>
+
+    <div id="segundaPergunta" class="div-segunda">
+        <h3>Era uma pegadinha, tem certeza que quer continuar?</h3>
+        <button>Não</button>
+        <button onclick="mudarDivSegunda()">Sim</button>
+    </div>
+
+    <div id="terceiraPergunta" class="div-terceira">
+        <h3>Você não desiste facil ein, rapaz?</h3>
+        <button onclick="mudarDivTerceira()">Jamais</button>
+        <button>Pior que desisto!</button>
+
+    </div>
+
+    <div class="divGeral">
+        <div id="quartoBox" class="div-quarto">
+            <p>Só queria dizer que você é incrível, mesmo que ache ou me diga que não, sempre irei achar isso.<br>
+            Saiba que eu te quero ver muito feliz, viu ?! Te conheço a pouco tempo, mas sinto que você é uma boa pessoa, um cara muito foda!<br>
+            Então, jamais desista de ser feliz, não desista de ser quem você é, pois você merece o mundo e muito mais!<br></p>
+
+            <p>Eu realmente gosto de você, e escolhi e estou escolhendo ficar pra poder te apoiar em todos os momentos, então não se bloqueie e conte comigo, tá?!<br>
+                Mesmo que não acredite, eu estou começando a te amar, e não digo da boca pra fora. Escolhi ficar e quero te ajudar<strong> em TUDO.</strong><br>
+                Fica bem, tá?
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function mudarDivPrimeira() {
+            var divNova = document.querySelector('.div-primeira');
+            var divStylePrimeira = document.getElementById('primeiraPergunta').style.visibility = 'hidden';
+            var divStyleSegunda = document.getElementById('segundaPergunta').style.visibility = 'visible';
+        }
+
+        function mudarDivSegunda() {
+            var divStylePrimeira = document.getElementById('segundaPergunta').style.visibility = 'hidden';
+            var divStyleSegunda = document.getElementById('terceiraPergunta').style.visibility = 'visible';
+        }
+
+        function mudarDivTerceira() {
+            var divStyle = document.getElementById('terceiraPergunta').style.visibility = 'hidden';
+            var divStyle = document.getElementById('quartoBox').style.visibility = 'visible';
+
+        }
+    </script>
+</body>
+</html>
